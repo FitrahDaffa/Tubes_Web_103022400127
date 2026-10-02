@@ -9,6 +9,8 @@ body {
 main{
     flex: 1;
     padding: 10px 20px;
+    display: flex;
+    justify-content: center;
 }
 header {
     background-color: white;
@@ -51,7 +53,14 @@ nav a {
 nav a:hover {
     color: purple;
 }
-
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    color: black;
+    background-color: white;
+    text-align: center;
+}
 footer {
     background-color: white;
     text-align: center;
