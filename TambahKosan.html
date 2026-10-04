@@ -1,48 +1,66 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Tambah Kosan</title>
-    </head>
+    <Head>
+        <Title>homepage</Title>
+        <link rel="stylesheet" href="style/TambahKosan.css">
+    </Head>
     <body>
         <header>
-            <h1>Tambah Data Penghuni Kosan</h1>
-            <img src="KosanHubLogo.png"  height= "100" width = "100 " alt=gambar logo kosan">
+            <div class="logo">
+                <img src="KosanHubLogo.png" alt="KosanHub">
+                <h1>Kosan Hub</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="DetailKosan.html">Detail Kosan</a></li>
+                    <li><a href="TambahKosan.html">Tambah Data Kosan</a></li>
+                </ul>
+            </nav>
         </header>
-        <form>
-            <th>
-                <p>masukan nama</p>
-                <input type="text">
-            </th>
-            <th>
-                <p>No kamar</p>
-                <input type="text">
-            </th>
-            <th>
-                <p>No Tlp</p>
-                <input type="text">
-            </th>
-            <th>
-                <p>Tanggal Masuk</p>
-                <input type="text">
-            </th>
-            <th>
-                <p>no token listrik</p>
-                <input type="text">
-            </th>
-            <th>
-                <p>banyak penghuni</p>
-                <input type="text">
-            </th>
-            <th>
-                <p>masukan data</p>
-                <input type="submit">
-            </th>
-        </form>
-            <a href="main.html">HomePage</a>
-            <div></div>
-            <a href="DetailKosan.html">Detail Kosan</a>
+        <main>
+            <div class: "formTambahKosan">
+                <h2>Tambah Data Kosan</h2>
+                <form action="proses_tambah_kosan.php" method="POST">
+                    <label for="nama">Nama:</label>
+                    <input type="text" id="nama" name="nama" required><br><br>
+
+                    <label for="tipe_kamar">Tipe Kamar:</label>
+                    <select id="tipe_kamar" name="tipe_kamar" required>
+                        <option value="">Pilih Tipe Kamar</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select><br><br>
+
+                    <label for="tanggal_masuk">Tanggal Masuk:</label>
+                    <input type="date" id="tanggal_masuk" name="tanggal_masuk" required><br><br>
+
+                    <label for="no_token_listrik">No Token Listrik:</label>
+                    <input type="text" id="no_token_listrik" name="no_token_listrik" required><br><br>
+
+                    <label for="banyak_penghuni">Banyak Penghuni:</label>
+                    <input type="number" id="banyak_penghuni" name="banyak_penghuni" required><br><br>
+
+                    <label for="status">Status:</label>
+                    <select id="status" name="status" required>
+                        <option value="">Pilih Status</option>
+                        <option value="Terisi">Terisi</option>
+                        <option value="Kosong">Kosong</option>
+                        <option value="Perbaikan">Perbaikan</option>
+                    </select><br><br>
+
+                    <label for="harga_sewa">Harga Sewa:</label>
+                    <input type="number" id="harga_sewa" name="harga_sewa" required><br><br>
+
+                    <label for="tanggal_tempo">Tanggal Tempo:</label>
+                    <input type="date" id="tanggal_tempo" name="tanggal_tempo"><br><br>
+
+                    <input type="submit" value="Tambah Data">
+                </form>
+        </main>
         <footer>
             <p>Web_103022400127</p>
         </footer>
-    </body>
+    </body>    
 </html>
