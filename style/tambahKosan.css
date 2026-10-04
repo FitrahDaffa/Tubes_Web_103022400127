@@ -1,27 +1,17 @@
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     background-color: rgb(105, 105, 202);
     min-height: 100vh;
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
 }
-main{
-    flex: 1;
-    padding: 10px 20px;
-}
-.formTambahKosan {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgb(105, 105, 202);
-    margin: 30px auto;
-    width: 90%;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    justify-content: center;
-}
+
 header {
     background-color: white;
     padding: 5px 20px;
@@ -30,43 +20,144 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-h2 {
-    color: white;
-    text-align: center;
-}
+
 .logo {
     display: flex;
     align-items: center;
     gap: 15px;
 }
+
 .logo img {
     width: 80px;
     height: 80px;
     object-fit: contain;
 }
+
 .logo h1 {
     color: black;
     font-size: 25px;
-    margin: 0;
 }
+
 nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
+
 nav a {
     text-decoration: none;
     color: black;
 }
+
 nav a:hover {
     color: purple;
 }
+
+main {
+    flex: 1;
+    padding: 30px 20px;
+}
+
+.formTambahKosan {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    width: 600px;
+    max-width: 100%;
+}
+
+.formTambahKosan h2 {
+    color: rgb(105, 105, 202);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.formTambahKosan form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    gap: 15px;
+}
+
+.form-group label {
+    width: 160px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: rgb(105, 105, 202);
+}
+
+.form-button {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.form-button input {
+    background-color: rgb(105, 105, 202);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.form-button input:hover {
+    background-color: rgb(75, 75, 170);
+}
+
 footer {
     background-color: white;
     text-align: center;
     color: black;
     padding: 15px;
     margin-top: auto;
+}
+
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .formTambahKosan {
+        padding: 20px;
+    }
+
+    .form-group {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .form-group label {
+        width: 100%;
+    }
 }
